@@ -17539,16 +17539,16 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="GND12" gate="1" x="96.52" y="5.08"/>
 <instance part="R24" gate="G$1" x="-20.32" y="45.72" rot="R90"/>
 <instance part="R25" gate="G$1" x="177.8" y="27.94" rot="R90"/>
-<instance part="P+10" gate="1" x="-2.54" y="0"/>
+<instance part="P+10" gate="1" x="-12.7" y="-5.08"/>
 <instance part="GND13" gate="1" x="177.8" y="17.78"/>
 <instance part="AMT" gate="G$1" x="160.02" y="86.36"/>
 <instance part="GND19" gate="1" x="160.02" y="73.66"/>
 <instance part="VEL_LED" gate="G$1" x="177.8" y="40.64"/>
-<instance part="R9" gate="G$1" x="-12.7" y="-7.62" rot="R90"/>
-<instance part="R17" gate="G$1" x="-2.54" y="-30.48" rot="R90"/>
-<instance part="R18" gate="G$1" x="-2.54" y="-10.16" rot="R90"/>
+<instance part="R9" gate="G$1" x="-2.54" y="-7.62" rot="R90"/>
+<instance part="R17" gate="G$1" x="-12.7" y="-30.48" rot="R90"/>
+<instance part="R18" gate="G$1" x="-12.7" y="-15.24" rot="R90"/>
 <instance part="R26" gate="G$1" x="22.86" y="-20.32" rot="R180"/>
-<instance part="GND14" gate="1" x="-2.54" y="-40.64"/>
+<instance part="GND14" gate="1" x="-12.7" y="-40.64"/>
 <instance part="PWR1" gate="G$1" x="76.2" y="-22.86"/>
 <instance part="U$2" gate="G$1" x="106.68" y="-17.78" rot="R90"/>
 <instance part="U$3" gate="G$1" x="106.68" y="-22.86" rot="R90"/>
@@ -17559,7 +17559,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="GND6" gate="1" x="137.16" y="-25.4"/>
 <instance part="C8" gate="G$1" x="127" y="-12.7"/>
 <instance part="C9" gate="G$1" x="127" y="-25.4"/>
-<instance part="PITCH" gate="G$1" x="187.96" y="121.92" rot="R180"/>
+<instance part="PITCH" gate="G$1" x="177.8" y="121.92" rot="R180"/>
 <instance part="VEL" gate="G$1" x="175.26" y="81.28" rot="R180"/>
 <instance part="GATE" gate="G$1" x="43.18" y="-25.4" rot="R180"/>
 <instance part="GND3" gate="1" x="35.56" y="-40.64"/>
@@ -17576,11 +17576,11 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="GND8" gate="1" x="104.14" y="63.5"/>
 <instance part="P+4" gate="1" x="86.36" y="86.36"/>
 <instance part="P-1" gate="1" x="86.36" y="55.88"/>
-<instance part="P+7" gate="1" x="88.9" y="-5.08"/>
+<instance part="P+7" gate="1" x="88.9" y="-2.54"/>
 <instance part="R4" gate="G$1" x="157.48" y="50.8" rot="R180"/>
-<instance part="R10" gate="G$1" x="170.18" y="127"/>
+<instance part="R10" gate="G$1" x="162.56" y="127"/>
 <instance part="GND11" gate="1" x="167.64" y="73.66"/>
-<instance part="GND15" gate="1" x="180.34" y="114.3"/>
+<instance part="GND15" gate="1" x="170.18" y="114.3"/>
 <instance part="IC1" gate="P" x="86.36" y="71.12"/>
 </instances>
 <busses>
@@ -17694,7 +17694,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 </segment>
 <segment>
 <pinref part="P+7" gate="1" pin="+5V"/>
-<wire x1="88.9" y1="-7.62" x2="88.9" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="-5.08" x2="88.9" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="PWR1" gate="G$1" pin="+5V"/>
 <wire x1="88.9" y1="-25.4" x2="86.36" y2="-25.4" width="0.1524" layer="91"/>
 </segment>
@@ -17773,7 +17773,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <segment>
 <pinref part="R17" gate="G$1" pin="1"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<wire x1="-2.54" y1="-38.1" x2="-2.54" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="-38.1" x2="-12.7" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="PWR1" gate="G$1" pin="GND"/>
@@ -17821,14 +17821,14 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <segment>
 <pinref part="PITCH" gate="G$1" pin="RING"/>
 <pinref part="GND15" gate="1" pin="GND"/>
-<wire x1="180.34" y1="116.84" x2="180.34" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="116.84" x2="170.18" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+12V" class="0">
 <segment>
 <pinref part="R18" gate="G$1" pin="2"/>
 <pinref part="P+10" gate="1" pin="+12V"/>
-<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="-10.16" x2="-12.7" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="+"/>
@@ -17894,18 +17894,18 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <net name="N$9" class="0">
 <segment>
 <wire x1="187.96" y1="-27.94" x2="187.96" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="109.22" x2="157.48" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="109.22" x2="154.94" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="PWR1" gate="G$1" pin="CV"/>
 <wire x1="86.36" y1="-27.94" x2="187.96" y2="-27.94" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 <pinref part="IC1" gate="B" pin="OUT"/>
-<wire x1="152.4" y1="127" x2="157.48" y2="127" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="127" x2="165.1" y2="127" width="0.1524" layer="91"/>
-<junction x="157.48" y="127"/>
-<wire x1="157.48" y1="109.22" x2="157.48" y2="127" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="127" x2="154.94" y2="127" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="127" x2="157.48" y2="127" width="0.1524" layer="91"/>
+<junction x="154.94" y="127"/>
+<wire x1="154.94" y1="109.22" x2="154.94" y2="127" width="0.1524" layer="91"/>
 <pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="152.4" y1="109.22" x2="157.48" y2="109.22" width="0.1524" layer="91"/>
-<junction x="157.48" y="109.22"/>
+<wire x1="152.4" y1="109.22" x2="154.94" y2="109.22" width="0.1524" layer="91"/>
+<junction x="154.94" y="109.22"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -18043,19 +18043,19 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <net name="N$1" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="-12.7" y1="-12.7" x2="-12.7" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="-17.78" x2="0" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="-12.7" x2="-2.54" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="-17.78" x2="0" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="A" pin="+IN"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
 <pinref part="R17" gate="G$1" pin="2"/>
-<wire x1="0" y1="-22.86" x2="-2.54" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="-22.86" x2="-2.54" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="0" y1="-22.86" x2="-12.7" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="-22.86" x2="-12.7" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="R18" gate="G$1" pin="1"/>
-<wire x1="-2.54" y1="-15.24" x2="-2.54" y2="-22.86" width="0.1524" layer="91"/>
-<junction x="-2.54" y="-22.86"/>
+<wire x1="-12.7" y1="-20.32" x2="-12.7" y2="-22.86" width="0.1524" layer="91"/>
+<junction x="-12.7" y="-22.86"/>
 <pinref part="IC1" gate="A" pin="-IN"/>
 </segment>
 </net>
@@ -18073,9 +18073,9 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <wire x1="30.48" y1="-20.32" x2="27.94" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="-20.32" x2="30.48" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="30.48" y="-20.32"/>
-<wire x1="30.48" y1="-35.56" x2="93.98" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="-35.56" x2="93.98" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="-30.48" x2="86.36" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="-35.56" x2="88.9" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="-35.56" x2="88.9" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="-30.48" x2="86.36" y2="-30.48" width="0.1524" layer="91"/>
 <pinref part="GATE" gate="G$1" pin="TIP"/>
 <pinref part="PWR1" gate="G$1" pin="GATE"/>
 </segment>
@@ -18136,9 +18136,9 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <pinref part="U1" gate="G$1" pin="PD3(INT1)"/>
 <wire x1="43.18" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="43.18" x2="55.88" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="7.62" x2="-12.7" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="7.62" x2="-2.54" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="-12.7" y1="7.62" x2="-12.7" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="7.62" x2="-2.54" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
 <junction x="55.88" y="43.18"/>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -18156,7 +18156,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <segment>
 <pinref part="PITCH" gate="G$1" pin="TIP"/>
 <pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="175.26" y1="127" x2="180.34" y2="127" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="127" x2="170.18" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
