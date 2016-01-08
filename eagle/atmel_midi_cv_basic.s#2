@@ -17495,7 +17495,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="P+4" library="supply1" deviceset="+12V" device=""/>
 <part name="P-1" library="supply1" deviceset="-12V" device=""/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
-<part name="R4" library="rcl" deviceset="R-US_" device="0207/10" value="1k8"/>
+<part name="R4" library="rcl" deviceset="R-US_" device="0207/10" value="3k3"/>
 <part name="R10" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
