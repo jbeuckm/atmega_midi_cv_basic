@@ -2142,7 +2142,7 @@ design rules under a new name.</description>
 <element name="Q2" library="transistor-npn" package="TO92" value="2N3904" x="29.21" y="17.78" rot="R180"/>
 <element name="R1" library="rcl" package="0207/10" value="10k" x="19.05" y="67.31"/>
 <element name="R10" library="rcl" package="0207/10" value="1k" x="72.39" y="20.32"/>
-<element name="R11" library="rcl" package="0207/10" value="1k" x="46.355" y="45.466" rot="R180"/>
+<element name="R11" library="rcl" package="0207/10" value="1k5" x="46.355" y="45.466" rot="R180"/>
 <element name="R17" library="rcl" package="0207/10" value="10k" x="40.64" y="21.59" rot="R180"/>
 <element name="R18" library="rcl" package="0207/10" value="47k" x="37.338" y="27.686"/>
 <element name="R2" library="rcl" package="0207/10" value="220" x="72.39" y="26.67" rot="R180"/>
