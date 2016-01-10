@@ -4,6 +4,7 @@
 #define LED 13   		    // LED pin on Arduino Uno
 
 #define GATE_PIN 3
+#define VELOCITY_PIN 4
 
 AH_MCP4922 AnalogOutput1(11,10,12,LOW,LOW);
 AH_MCP4922 AnalogOutput2(11,10,12,HIGH,LOW);
@@ -33,6 +34,7 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
 
   digitalWrite(GATE_PIN, HIGH);
   digitalWrite(LED, HIGH);
+//  analogWrite(VELOCITY_PIN, velocity * 32);
  }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
@@ -45,6 +47,7 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
   if (liveNoteCount == 0) {
     digitalWrite(GATE_PIN, LOW);
     digitalWrite(LED, LOW);
+//    analogWrite(VELOCITY_PIN, 0);
   }
 }
 
@@ -80,6 +83,8 @@ void setup()
     
     pinMode(LED, OUTPUT);
     pinMode(GATE_PIN, OUTPUT);
+    digitalWrite(GATE_PIN, LOW);
+    digitalWrite(LED, LOW);
 
     delay(1000);
 
@@ -89,7 +94,7 @@ void setup()
     baseNoteFrequency = (108 - 12) * 42;
     AnalogOutput1.setValue(baseNoteFrequency);
     // calibrate full velocity
-//    AnalogOutput2.setValue(32 * 127);
+    AnalogOutput2.setValue(32 * 127);
 
     MIDI.setHandleNoteOn(handleNoteOn);
     MIDI.setHandleNoteOff(handleNoteOff);
@@ -100,21 +105,19 @@ void setup()
 
 void playScale(int channel) {
 
-  int note = 36;
+  int note = 60;
 
   for (int i=0; i<channel; i++) {
-      handleNoteOn(channel, note, 127);
-      delay(150);
-      handleNoteOff(channel, note, 127);
-      delay(150);
 
-      note ++;
+      handleNoteOn(channel, note, 100);
+      delay(100);
+      handleNoteOff(channel, note, 100);
+      delay(100);
+      note++;
   }
 
 }
 
-
-int state = 0;
 
 void loop()
 {
