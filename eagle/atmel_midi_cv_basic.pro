@@ -2,24 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : /Users/joebeuckman/Dropbox/CAM/eurorack/atmega_midi_cv_basic/eagle/atmel_midi_cv_basic.brd
 
-Start at      : 14:36:05 (1/9/16)
-End at        : 14:38:57 (1/9/16)
-Elapsed time  : 00:00:26
+Start at      : 20:20:27 (1/9/16)
+End at        : 20:24:43 (1/9/16)
+Elapsed time  : 00:00:34
 
 Signals       :    36   RoutingGrid: 12.5 mil  Layers: 1
 Connections   :    99   predefined:  0 ( 0 Vias )
 
-Router memory :   194388
+Router memory :   192060
 
-Passname          :    Busses     Route Optimize1 Optimize2 Optimize3 Optimize4
+Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:00  00:00:25  00:00:00  00:00:01  00:00:00  00:00:00
-Number of Ripups  :         0       265         0         0         0         0
-max. Level        :         0         5         0         0         0         0
-max. Total        :         0        28         0         0         0         0
+Time per pass     :  00:00:32  00:00:00  00:00:01  00:00:01  00:00:00
+Number of Ripups  :       233         0         0         0         0
+max. Level        :         7         0         0         0         0
+max. Total        :        30         0         0         0         0
 
-Routed            :         4        89        89        89        89        89
-Vias              :         0         0         0         0         0         0
-Resolution        :     4.0 %    89.9 %    89.9 %    89.9 %    89.9 %    89.9 %
+Routed            :        90        90        90        90        90
+Vias              :         0         0         0         0         0
+Resolution        :    90.9 %    90.9 %    90.9 %    90.9 %    90.9 %
 
-Final             : 89.9% finished
+Final             : 90.9% finished

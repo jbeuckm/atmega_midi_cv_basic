@@ -17286,13 +17286,10 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="R24" library="rcl" deviceset="R-US_" device="0207/10" value="1M"/>
 <part name="R25" library="rcl" deviceset="R-US_" device="0207/10" value="220"/>
-<part name="P+10" library="supply1" deviceset="+12V" device=""/>
 <part name="AMT" library="pot" deviceset="3RP/1610N" device="" value="100k"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="VEL_LED" library="SparkFun-LED" deviceset="LED" device="5MM"/>
-<part name="R9" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
-<part name="R17" library="rcl" deviceset="R-US_" device="0207/10" value="20k"/>
-<part name="R18" library="rcl" deviceset="R-US_" device="0207/10" value="100k"/>
+<part name="R9" library="rcl" deviceset="R-US_" device="0207/10" value="1k5"/>
 <part name="R26" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="PWR1" library="eurorack" deviceset="POWER" device=""/>
@@ -17323,6 +17320,7 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <part name="R12" library="rcl" deviceset="R-US_" device="0207/10" value="3k9"/>
 <part name="C6" library="rcl" deviceset="C-US" device="050-024X044" value="100n"/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
+<part name="R13" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -17334,17 +17332,17 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <instance part="C1" gate="G$1" x="-17.78" y="58.42" rot="R90"/>
 <instance part="C2" gate="G$1" x="-17.78" y="30.48" rot="R90"/>
 <instance part="R1" gate="G$1" x="-15.24" y="83.82"/>
-<instance part="OK1" gate="G$1" x="-2.54" y="106.68"/>
+<instance part="OK1" gate="G$1" x="20.32" y="106.68"/>
 <instance part="C3" gate="G$1" x="-25.4" y="68.58"/>
-<instance part="D1" gate="G$1" x="-22.86" y="106.68" rot="R90"/>
-<instance part="R2" gate="G$1" x="-33.02" y="111.76"/>
-<instance part="MIDI_IN_4" gate="1" x="-48.26" y="111.76"/>
-<instance part="MIDI_IN_5" gate="1" x="-48.26" y="101.6"/>
-<instance part="R3" gate="G$1" x="25.4" y="114.3" rot="R90"/>
+<instance part="D1" gate="G$1" x="5.08" y="106.68" rot="R90"/>
+<instance part="R2" gate="G$1" x="-5.08" y="111.76"/>
+<instance part="MIDI_IN_4" gate="1" x="-22.86" y="111.76"/>
+<instance part="MIDI_IN_5" gate="1" x="-22.86" y="101.6"/>
+<instance part="R3" gate="G$1" x="48.26" y="114.3" rot="R90"/>
 <instance part="P+1" gate="1" x="-25.4" y="91.44"/>
-<instance part="P+2" gate="1" x="15.24" y="127"/>
+<instance part="P+2" gate="1" x="38.1" y="127"/>
 <instance part="GND1" gate="1" x="-25.4" y="10.16"/>
-<instance part="GND2" gate="1" x="17.78" y="91.44"/>
+<instance part="GND2" gate="1" x="40.64" y="91.44"/>
 <instance part="R5" gate="G$1" x="119.38" y="116.84"/>
 <instance part="R6" gate="G$1" x="121.92" y="104.14" rot="MR180"/>
 <instance part="GND4" gate="1" x="121.92" y="91.44"/>
@@ -17360,26 +17358,23 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <instance part="GND9" gate="1" x="20.32" y="81.28"/>
 <instance part="R24" gate="G$1" x="-20.32" y="45.72" rot="R90"/>
 <instance part="R25" gate="G$1" x="78.74" y="17.78" rot="R90"/>
-<instance part="P+10" gate="1" x="-12.7" y="2.54"/>
 <instance part="AMT" gate="G$1" x="152.4" y="73.66"/>
 <instance part="GND19" gate="1" x="152.4" y="60.96"/>
 <instance part="VEL_LED" gate="G$1" x="78.74" y="30.48"/>
-<instance part="R9" gate="G$1" x="-2.54" y="0" rot="R90"/>
-<instance part="R17" gate="G$1" x="-12.7" y="-22.86" rot="R90"/>
-<instance part="R18" gate="G$1" x="-12.7" y="-7.62" rot="R90"/>
-<instance part="R26" gate="G$1" x="22.86" y="-12.7" rot="R180"/>
-<instance part="GND14" gate="1" x="-12.7" y="-33.02"/>
-<instance part="PWR1" gate="G$1" x="104.14" y="-15.24"/>
-<instance part="U$2" gate="G$1" x="134.62" y="-10.16" rot="R90"/>
-<instance part="C5" gate="G$1" x="147.32" y="-5.08"/>
-<instance part="P+5" gate="1" x="147.32" y="5.08"/>
-<instance part="GND6" gate="1" x="165.1" y="-17.78"/>
-<instance part="C8" gate="G$1" x="154.94" y="-5.08"/>
+<instance part="R9" gate="G$1" x="5.08" y="-12.7" rot="R180"/>
+<instance part="R26" gate="G$1" x="38.1" y="-2.54" rot="R180"/>
+<instance part="GND14" gate="1" x="-7.62" y="-30.48"/>
+<instance part="PWR1" gate="G$1" x="104.14" y="-7.62"/>
+<instance part="U$2" gate="G$1" x="134.62" y="-2.54" rot="R90"/>
+<instance part="C5" gate="G$1" x="147.32" y="2.54"/>
+<instance part="P+5" gate="1" x="147.32" y="12.7"/>
+<instance part="GND6" gate="1" x="165.1" y="-10.16"/>
+<instance part="C8" gate="G$1" x="154.94" y="2.54"/>
 <instance part="PITCH" gate="G$1" x="175.26" y="109.22" rot="R180"/>
 <instance part="VEL" gate="G$1" x="167.64" y="68.58" rot="R180"/>
-<instance part="GATE" gate="G$1" x="43.18" y="-17.78" rot="R180"/>
-<instance part="GND3" gate="1" x="35.56" y="-33.02"/>
-<instance part="IC1" gate="A" x="7.62" y="-12.7"/>
+<instance part="GATE" gate="G$1" x="58.42" y="-7.62" rot="R180"/>
+<instance part="GND3" gate="1" x="50.8" y="-30.48"/>
+<instance part="IC1" gate="A" x="7.62" y="-2.54"/>
 <instance part="IC1" gate="B" x="137.16" y="114.3"/>
 <instance part="IC1" gate="C" x="132.08" y="83.82"/>
 <instance part="MIDI_CH" gate="G$1" x="55.88" y="73.66" rot="R180"/>
@@ -17389,7 +17384,7 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <instance part="C4" gate="G$1" x="86.36" y="63.5"/>
 <instance part="GND8" gate="1" x="78.74" y="48.26"/>
 <instance part="P+4" gate="1" x="78.74" y="78.74"/>
-<instance part="P+7" gate="1" x="116.84" y="5.08"/>
+<instance part="P+7" gate="1" x="116.84" y="12.7"/>
 <instance part="R10" gate="G$1" x="154.94" y="114.3"/>
 <instance part="GND11" gate="1" x="160.02" y="60.96"/>
 <instance part="GND15" gate="1" x="167.64" y="101.6"/>
@@ -17401,6 +17396,7 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <instance part="R12" gate="G$1" x="104.14" y="43.18" rot="R180"/>
 <instance part="C6" gate="G$1" x="114.3" y="35.56"/>
 <instance part="GND17" gate="1" x="114.3" y="25.4"/>
+<instance part="R13" gate="G$1" x="-7.62" y="-20.32" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -17443,29 +17439,29 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <segment>
 <pinref part="OK1" gate="G$1" pin="C"/>
 <pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="-15.24" y1="101.6" x2="-22.86" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="101.6" x2="-22.86" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="101.6" x2="5.08" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="101.6" x2="5.08" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="MIDI_IN_5" gate="1" pin="P"/>
-<wire x1="-45.72" y1="101.6" x2="-22.86" y2="101.6" width="0.1524" layer="91"/>
-<junction x="-22.86" y="101.6"/>
+<wire x1="-20.32" y1="101.6" x2="5.08" y2="101.6" width="0.1524" layer="91"/>
+<junction x="5.08" y="101.6"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="D1" gate="G$1" pin="C"/>
-<wire x1="-22.86" y1="109.22" x2="-22.86" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="109.22" x2="5.08" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="OK1" gate="G$1" pin="A"/>
-<wire x1="-22.86" y1="111.76" x2="-15.24" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="111.76" x2="7.62" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-27.94" y1="111.76" x2="-22.86" y2="111.76" width="0.1524" layer="91"/>
-<junction x="-22.86" y="111.76"/>
+<wire x1="0" y1="111.76" x2="5.08" y2="111.76" width="0.1524" layer="91"/>
+<junction x="5.08" y="111.76"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="MIDI_IN_4" gate="1" pin="P"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-45.72" y1="111.76" x2="-38.1" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="111.76" x2="-10.16" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -17486,13 +17482,13 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 </segment>
 <segment>
 <pinref part="OK1" gate="G$1" pin="VCC"/>
-<wire x1="10.16" y1="111.76" x2="15.24" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="111.76" x2="15.24" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="119.38" x2="25.4" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="111.76" x2="38.1" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="111.76" x2="38.1" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="119.38" x2="48.26" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
-<wire x1="15.24" y1="124.46" x2="15.24" y2="119.38" width="0.1524" layer="91"/>
-<junction x="15.24" y="119.38"/>
+<wire x1="38.1" y1="124.46" x2="38.1" y2="119.38" width="0.1524" layer="91"/>
+<junction x="38.1" y="119.38"/>
 </segment>
 <segment>
 <pinref part="P+6" gate="1" pin="+5V"/>
@@ -17507,17 +17503,17 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 </segment>
 <segment>
 <pinref part="P+7" gate="1" pin="+5V"/>
-<wire x1="116.84" y1="2.54" x2="116.84" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="10.16" x2="116.84" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="PWR1" gate="G$1" pin="+5V"/>
-<wire x1="116.84" y1="-17.78" x2="114.3" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="-10.16" x2="114.3" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="17.78" y1="101.6" x2="17.78" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="101.6" x2="40.64" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="OK1" gate="G$1" pin="GND"/>
-<wire x1="10.16" y1="101.6" x2="17.78" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="101.6" x2="40.64" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GND@1"/>
@@ -17567,28 +17563,28 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <wire x1="109.22" y1="71.12" x2="114.3" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R17" gate="G$1" pin="1"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<wire x1="-12.7" y1="-30.48" x2="-12.7" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="-27.94" x2="-7.62" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="R13" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="PWR1" gate="G$1" pin="GND"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="114.3" y1="-12.7" x2="147.32" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="-12.7" x2="154.94" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="-12.7" x2="165.1" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="-12.7" x2="165.1" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="-5.08" x2="147.32" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="-5.08" x2="154.94" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="-5.08" x2="165.1" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="-5.08" x2="165.1" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="-"/>
-<wire x1="147.32" y1="-10.16" x2="147.32" y2="-12.7" width="0.1524" layer="91"/>
-<junction x="147.32" y="-12.7"/>
+<wire x1="147.32" y1="-2.54" x2="147.32" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="147.32" y="-5.08"/>
 <pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="154.94" y1="-10.16" x2="154.94" y2="-12.7" width="0.1524" layer="91"/>
-<junction x="154.94" y="-12.7"/>
+<wire x1="154.94" y1="-2.54" x2="154.94" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="154.94" y="-5.08"/>
 </segment>
 <segment>
 <pinref part="GATE" gate="G$1" pin="RING"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="35.56" y1="-30.48" x2="35.56" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="-27.94" x2="50.8" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="MIDI_CH" gate="G$1" pin="E"/>
@@ -17637,22 +17633,17 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 </net>
 <net name="+12V" class="0">
 <segment>
-<pinref part="R18" gate="G$1" pin="2"/>
-<pinref part="P+10" gate="1" pin="+12V"/>
-<wire x1="-12.7" y1="-2.54" x2="-12.7" y2="0" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="C5" gate="G$1" pin="+"/>
 <pinref part="P+5" gate="1" pin="+12V"/>
-<wire x1="147.32" y1="2.54" x2="147.32" y2="0" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="10.16" x2="147.32" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="2"/>
-<wire x1="147.32" y1="0" x2="147.32" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="-10.16" x2="142.24" y2="0" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="0" x2="147.32" y2="0" width="0.1524" layer="91"/>
-<junction x="147.32" y="0"/>
+<wire x1="147.32" y1="7.62" x2="147.32" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="-2.54" x2="142.24" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="7.62" x2="147.32" y2="7.62" width="0.1524" layer="91"/>
+<junction x="147.32" y="7.62"/>
 <pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="154.94" y1="-2.54" x2="154.94" y2="0" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="0" x2="147.32" y2="0" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="5.08" x2="154.94" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="7.62" x2="147.32" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="1"/>
@@ -17680,11 +17671,11 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 </net>
 <net name="N$9" class="0">
 <segment>
-<wire x1="180.34" y1="-25.4" x2="180.34" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="-17.78" x2="180.34" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="PWR1" gate="G$1" pin="CV"/>
-<wire x1="114.3" y1="-20.32" x2="124.46" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="-20.32" x2="124.46" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="-25.4" x2="180.34" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="-12.7" x2="124.46" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-12.7" x2="124.46" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-17.78" x2="180.34" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="PITCH" gate="G$1" pin="TIP"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="160.02" y1="114.3" x2="162.56" y2="114.3" width="0.1524" layer="91"/>
@@ -17751,14 +17742,12 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="OK1" gate="G$1" pin="VO"/>
-<wire x1="10.16" y1="106.68" x2="25.4" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="106.68" x2="25.4" y2="109.22" width="0.1524" layer="91"/>
-<junction x="25.4" y="106.68"/>
-<wire x1="25.4" y1="88.9" x2="25.4" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="106.68" x2="48.26" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="106.68" x2="48.26" y2="109.22" width="0.1524" layer="91"/>
+<junction x="48.26" y="106.68"/>
 <pinref part="U1" gate="G$1" pin="PD0(RXD)"/>
 <wire x1="43.18" y1="50.8" x2="48.26" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="50.8" x2="48.26" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="88.9" x2="48.26" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="50.8" x2="48.26" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$43" class="0">
@@ -17791,42 +17780,28 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <pinref part="IC1" gate="C" pin="+IN"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="-10.16" x2="0" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="A" pin="+IN"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="R17" gate="G$1" pin="2"/>
-<wire x1="0" y1="-15.24" x2="-12.7" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="-15.24" x2="-12.7" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="R18" gate="G$1" pin="1"/>
-<wire x1="-12.7" y1="-12.7" x2="-12.7" y2="-15.24" width="0.1524" layer="91"/>
-<junction x="-12.7" y="-15.24"/>
-<pinref part="IC1" gate="A" pin="-IN"/>
-</segment>
-</net>
 <net name="N$16" class="0">
 <segment>
 <pinref part="R26" gate="G$1" pin="2"/>
-<wire x1="17.78" y1="-12.7" x2="15.24" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="-2.54" x2="17.78" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="A" pin="OUT"/>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="17.78" y1="-2.54" x2="15.24" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="-12.7" x2="17.78" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="-12.7" x2="17.78" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="17.78" y="-2.54"/>
 </segment>
 </net>
 <net name="N$31" class="0">
 <segment>
 <pinref part="R26" gate="G$1" pin="1"/>
-<wire x1="35.56" y1="-12.7" x2="30.48" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="-12.7" x2="27.94" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="-12.7" x2="30.48" y2="-27.94" width="0.1524" layer="91"/>
-<junction x="30.48" y="-12.7"/>
-<wire x1="30.48" y1="-27.94" x2="116.84" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="-27.94" x2="116.84" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="-22.86" x2="114.3" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="-2.54" x2="45.72" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="-2.54" x2="43.18" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="-2.54" x2="45.72" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="45.72" y="-2.54"/>
+<wire x1="45.72" y1="-20.32" x2="116.84" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="-20.32" x2="116.84" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="-15.24" x2="114.3" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="GATE" gate="G$1" pin="TIP"/>
 <pinref part="PWR1" gate="G$1" pin="GATE"/>
 </segment>
@@ -17842,7 +17817,7 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <segment>
 <pinref part="PWR1" gate="G$1" pin="+12V"/>
 <pinref part="U$2" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="-10.16" x2="127" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="-2.54" x2="127" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$19" class="0">
@@ -17858,8 +17833,9 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <wire x1="43.18" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="43.18" x2="55.88" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="7.62" x2="-2.54" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="-2.54" y1="7.62" x2="-2.54" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="A" pin="+IN"/>
+<wire x1="-2.54" y1="7.62" x2="-2.54" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$27" class="0">
@@ -17876,10 +17852,10 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 </net>
 <net name="N$20" class="0">
 <segment>
-<wire x1="78.74" y1="35.56" x2="78.74" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="VEL_LED" gate="G$1" pin="A"/>
-<wire x1="78.74" y1="35.56" x2="43.18" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="PD6(AIN0)"/>
+<wire x1="78.74" y1="33.02" x2="78.74" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="PD4(XCK/T0)"/>
+<wire x1="78.74" y1="40.64" x2="43.18" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$21" class="0">
@@ -17928,6 +17904,18 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <pinref part="VEL_LED" gate="G$1" pin="C"/>
 <pinref part="R25" gate="G$1" pin="2"/>
 <wire x1="78.74" y1="22.86" x2="78.74" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="R9" gate="G$1" pin="2"/>
+<wire x1="0" y1="-12.7" x2="-7.62" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="-12.7" x2="-7.62" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="A" pin="-IN"/>
+<wire x1="-7.62" y1="-5.08" x2="0" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="-7.62" y1="-15.24" x2="-7.62" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="-7.62" y="-12.7"/>
 </segment>
 </net>
 </nets>
