@@ -39,7 +39,7 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
@@ -144,6 +144,51 @@
 <wire x1="100" y1="0" x2="100" y2="80" width="0" layer="20"/>
 <wire x1="100" y1="80" x2="0" y2="80" width="0" layer="20"/>
 <wire x1="0" y1="80" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="12.446" y1="71.12" x2="87.63" y2="71.12" width="1.6764" layer="46"/>
+<wire x1="87.63" y1="71.12" x2="88.9" y2="69.85" width="1.6764" layer="46"/>
+<wire x1="88.9" y1="69.85" x2="88.9" y2="0.762" width="1.6764" layer="46"/>
+<wire x1="88.9" y1="0.762" x2="87.376" y2="-0.762" width="1.6764" layer="46"/>
+<wire x1="87.376" y1="-0.762" x2="12.7" y2="-0.762" width="1.6764" layer="46"/>
+<wire x1="12.7" y1="-0.762" x2="11.176" y2="0.762" width="1.6764" layer="46"/>
+<wire x1="11.176" y1="0.762" x2="11.176" y2="69.85" width="1.6764" layer="46"/>
+<wire x1="11.176" y1="69.85" x2="12.446" y2="71.12" width="1.6764" layer="46"/>
+<rectangle x1="64.77" y1="62.23" x2="69.85" y2="64.77" layer="16"/>
+<wire x1="15.24" y1="68.58" x2="14.478" y2="68.58" width="1.6764" layer="46"/>
+<wire x1="14.478" y1="68.58" x2="14.224" y2="68.326" width="1.6764" layer="46"/>
+<wire x1="14.224" y1="68.326" x2="14.224" y2="67.818" width="1.6764" layer="46"/>
+<wire x1="14.224" y1="67.818" x2="13.97" y2="67.564" width="1.6764" layer="46"/>
+<wire x1="13.97" y1="67.564" x2="14.478" y2="67.056" width="1.6764" layer="46"/>
+<wire x1="14.478" y1="67.056" x2="15.24" y2="67.056" width="1.6764" layer="46"/>
+<wire x1="15.24" y1="67.056" x2="15.24" y2="67.31" width="1.6764" layer="46"/>
+<wire x1="15.24" y1="67.31" x2="15.748" y2="67.818" width="1.6764" layer="46"/>
+<wire x1="15.748" y1="67.818" x2="15.24" y2="68.326" width="1.6764" layer="46"/>
+<wire x1="85.598" y1="68.58" x2="84.836" y2="68.58" width="1.6764" layer="46"/>
+<wire x1="84.836" y1="68.58" x2="84.582" y2="68.326" width="1.6764" layer="46"/>
+<wire x1="84.582" y1="68.326" x2="84.582" y2="67.818" width="1.6764" layer="46"/>
+<wire x1="84.582" y1="67.818" x2="84.328" y2="67.564" width="1.6764" layer="46"/>
+<wire x1="84.328" y1="67.564" x2="84.836" y2="67.056" width="1.6764" layer="46"/>
+<wire x1="84.836" y1="67.056" x2="85.598" y2="67.056" width="1.6764" layer="46"/>
+<wire x1="85.598" y1="67.056" x2="85.598" y2="67.31" width="1.6764" layer="46"/>
+<wire x1="85.598" y1="67.31" x2="86.106" y2="67.818" width="1.6764" layer="46"/>
+<wire x1="86.106" y1="67.818" x2="85.598" y2="68.326" width="1.6764" layer="46"/>
+<wire x1="16.764" y1="8.636" x2="16.002" y2="8.636" width="1.6764" layer="46"/>
+<wire x1="16.002" y1="8.636" x2="15.748" y2="8.382" width="1.6764" layer="46"/>
+<wire x1="15.748" y1="8.382" x2="15.748" y2="7.874" width="1.6764" layer="46"/>
+<wire x1="15.748" y1="7.874" x2="15.494" y2="7.62" width="1.6764" layer="46"/>
+<wire x1="15.494" y1="7.62" x2="16.002" y2="7.112" width="1.6764" layer="46"/>
+<wire x1="16.002" y1="7.112" x2="16.764" y2="7.112" width="1.6764" layer="46"/>
+<wire x1="16.764" y1="7.112" x2="16.764" y2="7.366" width="1.6764" layer="46"/>
+<wire x1="16.764" y1="7.366" x2="17.272" y2="7.874" width="1.6764" layer="46"/>
+<wire x1="17.272" y1="7.874" x2="16.764" y2="8.382" width="1.6764" layer="46"/>
+<wire x1="81.534" y1="8.636" x2="80.772" y2="8.636" width="1.6764" layer="46"/>
+<wire x1="80.772" y1="8.636" x2="80.518" y2="8.382" width="1.6764" layer="46"/>
+<wire x1="80.518" y1="8.382" x2="80.518" y2="7.874" width="1.6764" layer="46"/>
+<wire x1="80.518" y1="7.874" x2="80.264" y2="7.62" width="1.6764" layer="46"/>
+<wire x1="80.264" y1="7.62" x2="80.772" y2="7.112" width="1.6764" layer="46"/>
+<wire x1="80.772" y1="7.112" x2="81.534" y2="7.112" width="1.6764" layer="46"/>
+<wire x1="81.534" y1="7.112" x2="81.534" y2="7.366" width="1.6764" layer="46"/>
+<wire x1="81.534" y1="7.366" x2="82.042" y2="7.874" width="1.6764" layer="46"/>
+<wire x1="82.042" y1="7.874" x2="81.534" y2="8.382" width="1.6764" layer="46"/>
 </plain>
 <libraries>
 <library name="pot">
