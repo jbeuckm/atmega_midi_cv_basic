@@ -4,10 +4,11 @@
 #define LED 13   		    // LED pin on Arduino Uno
 
 #define GATE_PIN 3
-#define VELOCITY_PIN 4
+#define VELOCITY_PIN 6
+#define PWM_OUT_PIN 5
 
-AH_MCP4922 AnalogOutput1(11,10,12,LOW,LOW);
-AH_MCP4922 AnalogOutput2(11,10,12,HIGH,LOW);
+AH_MCP4922 AnalogOutput1(10,11,12,LOW,LOW);
+AH_MCP4922 AnalogOutput2(10,11,12,HIGH,LOW);
 
 int liveNoteCount = 0;
 int pitchbendOffset = 0;
@@ -34,7 +35,7 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
 
   digitalWrite(GATE_PIN, HIGH);
   digitalWrite(LED, HIGH);
-//  analogWrite(VELOCITY_PIN, velocity * 32);
+  analogWrite(VELOCITY_PIN, 2 * velocity);
  }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
@@ -47,7 +48,7 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
   if (liveNoteCount == 0) {
     digitalWrite(GATE_PIN, LOW);
     digitalWrite(LED, LOW);
-//    analogWrite(VELOCITY_PIN, 0);
+    analogWrite(VELOCITY_PIN, 0);
   }
 }
 
