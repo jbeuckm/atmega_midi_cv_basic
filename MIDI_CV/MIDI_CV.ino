@@ -7,6 +7,8 @@
 #define VELOCITY_PIN 6
 #define PWM_OUT_PIN 5
 
+#define ALL_NOTES_OFF 123
+
 AH_MCP4922 AnalogOutput1(10,11,12,LOW,LOW);
 AH_MCP4922 AnalogOutput2(10,11,12,HIGH,LOW);
 
@@ -20,13 +22,6 @@ byte selectedChannel = 17;
 
 void handleNoteOn(byte channel, byte pitch, byte velocity)
 {
-  if (selectedChannel == 17) {
-    selectedChannel = channel;
-  }
-  else if (channel != selectedChannel) {
-    return;
-  }
-  
   liveNoteCount++;
   
   baseNoteFrequency = (pitch - 12) * 42;
@@ -40,12 +35,9 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
 {
-  if (channel != selectedChannel) {
-    return;
-  }
   liveNoteCount--;
   
-  if (liveNoteCount == 0) {
+  if (liveNoteCount <= 0) {
     digitalWrite(GATE_PIN, LOW);
     digitalWrite(LED, LOW);
     analogWrite(VELOCITY_PIN, 0);
@@ -55,8 +47,15 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
 
 void handleControlChange(byte channel, byte number, byte value)
 {
-  if (channel != selectedChannel) {
-    return;
+  switch (number) {
+        
+    case ALL_NOTES_OFF:
+      liveNoteCount = 0;
+      handlePitchBend(selectedChannel, 0);
+      digitalWrite(GATE_PIN, LOW);
+      digitalWrite(LED, LOW);
+      analogWrite(VELOCITY_PIN, 0);
+      break;
   }
 
 }
@@ -77,17 +76,18 @@ void setup()
     int channelSpan = 1024 / 16;
     int channelInput = analogRead(0);
     selectedChannel = channelInput / channelSpan;
-
+/*
     Serial.begin(115200);
     Serial.println(channelInput);
     Serial.println(selectedChannel);
-    
+*/    
     pinMode(LED, OUTPUT);
-    pinMode(GATE_PIN, OUTPUT);
-    digitalWrite(GATE_PIN, LOW);
     digitalWrite(LED, LOW);
 
-    delay(1000);
+    pinMode(GATE_PIN, OUTPUT);
+    digitalWrite(GATE_PIN, LOW);
+
+    delay(500);
 
     playScale(selectedChannel);
 
@@ -100,6 +100,8 @@ void setup()
     MIDI.setHandleNoteOn(handleNoteOn);
     MIDI.setHandleNoteOff(handleNoteOff);
     MIDI.setHandlePitchBend(handlePitchBend);
+    MIDI.setHandleControlChange(handleControlChange);
+    
     MIDI.begin(selectedChannel);
 }
 
@@ -111,9 +113,9 @@ void playScale(int channel) {
   for (int i=0; i<channel; i++) {
 
       handleNoteOn(channel, note, 100);
-      delay(100);
+      delay(50);
       handleNoteOff(channel, note, 100);
-      delay(100);
+      delay(50);
       note++;
   }
 
