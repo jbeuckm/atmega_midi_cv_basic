@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,19 +39,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -17874,38 +17874,38 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="Q1" library="crystal" deviceset="CRYSTAL" device="HC49S"/>
 <part name="C1" library="rcl" deviceset="C-US" device="025-040X050" value="27pF"/>
 <part name="C2" library="rcl" deviceset="C-US" device="025-040X050" value="27pF"/>
-<part name="R1" library="rcl" deviceset="R-US_" device="0207/10" value="10k"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="0207/7" value="10k"/>
 <part name="OK1" library="optocoupler" deviceset="6N138" device=""/>
 <part name="C3" library="rcl" deviceset="C-US" device="050-024X044" value=".1uF"/>
 <part name="D1" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="1N4148"/>
-<part name="R2" library="rcl" deviceset="R-US_" device="0207/10" value="220"/>
+<part name="R2" library="rcl" deviceset="R-US_" device="0207/7" value="220"/>
 <part name="MIDI_IN_4" library="wirepad" deviceset="2,54/0,9" device="" value="midi pin 4"/>
 <part name="MIDI_IN_5" library="wirepad" deviceset="2,54/0,9" device="" value="midi pin 5"/>
-<part name="R3" library="rcl" deviceset="R-US_" device="0207/10" value="270"/>
+<part name="R3" library="rcl" deviceset="R-US_" device="0207/7" value="270"/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="R5" library="rcl" deviceset="R-US_" device="0207/10" value="3k3"/>
+<part name="R5" library="rcl" deviceset="R-US_" device="0207/7" value="3k3"/>
 <part name="SCALE_TRIM" library="pot" deviceset="TRIM_US-" device="B64W" value="10k"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="R7" library="rcl" deviceset="R-US_" device="0207/10" value="5k"/>
-<part name="R8" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
+<part name="R7" library="rcl" deviceset="R-US_" device="0207/7" value="5k"/>
+<part name="R8" library="rcl" deviceset="R-US_" device="0207/7" value="1k"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="R11" library="rcl" deviceset="R-US_" device="0207/10" value="1k5"/>
+<part name="R11" library="rcl" deviceset="R-US_" device="0207/7" value="1k5"/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
 <part name="U$4" library="MCP4822" deviceset="MCP4822-E/P" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="RST1" library="wirepad" deviceset="2,54/0,9" device="" value="reset"/>
 <part name="RST2" library="wirepad" deviceset="2,54/0,9" device="" value="reset "/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="R24" library="rcl" deviceset="R-US_" device="0207/10" value="1M"/>
-<part name="R25" library="rcl" deviceset="R-US_" device="0207/10" value="470"/>
+<part name="R24" library="rcl" deviceset="R-US_" device="0207/7" value="1M"/>
+<part name="R25" library="rcl" deviceset="R-US_" device="0207/7" value="470"/>
 <part name="AMT" library="pot" deviceset="3RP/1610N" device="" value="100k"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="VEL_LED" library="SparkFun-LED" deviceset="LED" device="5MM"/>
-<part name="R9" library="rcl" deviceset="R-US_" device="0207/10" value="1k5"/>
-<part name="R26" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
+<part name="R9" library="rcl" deviceset="R-US_" device="0207/7" value="1k5"/>
+<part name="R26" library="rcl" deviceset="R-US_" device="0207/7" value="1k"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="PWR1" library="eurorack" deviceset="POWER" device=""/>
 <part name="U$2" library="adafruit" deviceset="FB" device=""/>
@@ -17924,16 +17924,16 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="P+4" library="supply1" deviceset="+12V" device=""/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
-<part name="R10" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
+<part name="R10" library="rcl" deviceset="R-US_" device="0207/7" value="1k"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
-<part name="R4" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
+<part name="R4" library="rcl" deviceset="R-US_" device="0207/7" value="1k"/>
 <part name="PWM_OUT" library="erthenvar" deviceset="AUDIO-JACK" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="R12" library="rcl" deviceset="R-US_" device="0207/10" value="3k9"/>
+<part name="R12" library="rcl" deviceset="R-US_" device="0207/7" value="3k9"/>
 <part name="C6" library="rcl" deviceset="C-US" device="050-024X044" value="100n"/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
-<part name="R13" library="rcl" deviceset="R-US_" device="0207/10" value="1k"/>
+<part name="R13" library="rcl" deviceset="R-US_" device="0207/7" value="1k"/>
 <part name="IC1" library="linear" deviceset="TL072" device="P"/>
 <part name="IC2" library="linear" deviceset="TL072" device="P"/>
 <part name="P+8" library="supply1" deviceset="+12V" device=""/>
@@ -18579,8 +18579,8 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <net name="GND" class="0">
 <segment>
 <pinref part="VEL_LED" gate="G$1" pin="C"/>
-<pinref part="GND13" gate="1" pin="GND"/>
 <wire x1="78.74" y1="10.16" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="GND13" gate="1" pin="GND"/>
 </segment>
 </net>
 </nets>
