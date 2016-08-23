@@ -3,7 +3,7 @@
 
 #define LED 13   		    // LED pin on Arduino Uno
 
-#define GATE_PIN 3
+#define GATE_PIN 4
 #define VELOCITY_PIN 6
 #define PWM_OUT_PIN 5
 
@@ -76,11 +76,7 @@ void setup()
     int channelSpan = 1024 / 16;
     int channelInput = analogRead(0);
     selectedChannel = channelInput / channelSpan;
-/*
-    Serial.begin(115200);
-    Serial.println(channelInput);
-    Serial.println(selectedChannel);
-*/    
+
     pinMode(LED, OUTPUT);
     digitalWrite(LED, LOW);
 
