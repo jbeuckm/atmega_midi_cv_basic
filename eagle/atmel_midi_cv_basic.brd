@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1464,25 +1464,45 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="10" y1="0" x2="10" y2="-15.5" width="0.127" layer="51"/>
 <wire x1="10" y1="-15.5" x2="0" y2="-15.5" width="0.127" layer="51"/>
 <wire x1="0" y1="-15.5" x2="0" y2="0" width="0.127" layer="51"/>
-<text x="3.81" y="6.35" size="1.27" layer="21">&gt;NAME</text>
 <wire x1="4.4" y1="-2.5" x2="5.6" y2="-2.5" width="1.016" layer="46"/>
 <wire x1="4.4" y1="-15.7" x2="5.6" y2="-15.7" width="1.016" layer="46"/>
 <wire x1="-0.2" y1="-14.1" x2="-0.2" y2="-12.9" width="1.016" layer="46"/>
+<pad name="P$1" x="5" y="-2.5" drill="1.3" diameter="2.54" shape="long" rot="R180"/>
 <pad name="P$2" x="-0.2" y="-13.5" drill="1.3" diameter="2.54" shape="long" rot="R90"/>
 <pad name="P$3" x="5" y="-15.7" drill="1.3" diameter="2.54" shape="long" rot="R180"/>
-<pad name="P$1" x="5" y="-2.5" drill="1.3" diameter="2.54" shape="long" rot="R180"/>
-<polygon width="0.127" layer="45">
-<vertex x="2" y="3.5"/>
-<vertex x="8" y="3.5"/>
-<vertex x="8" y="0"/>
-<vertex x="2" y="0"/>
-</polygon>
+<text x="3.81" y="6.35" size="1.27" layer="21">&gt;NAME</text>
 <hole x="5.842" y="-2.4892" drill="1.3"/>
 <hole x="4.1402" y="-2.4892" drill="1.3"/>
 <hole x="-0.2032" y="-12.6492" drill="1.3"/>
 <hole x="-0.2032" y="-14.351" drill="1.3"/>
 <hole x="5.842" y="-15.6972" drill="1.3"/>
 <hole x="4.1656" y="-15.6972" drill="1.3"/>
+<polygon width="0.127" layer="45">
+<vertex x="2" y="3.5"/>
+<vertex x="8" y="3.5"/>
+<vertex x="8" y="0"/>
+<vertex x="2" y="0"/>
+</polygon>
+</package>
+<package name="JACK-90DEG-ITEAD">
+<description>Erthenvar 90deg jack prepared for slot milling by iTEAD</description>
+<wire x1="0" y1="0" x2="10" y2="0" width="0.127" layer="51"/>
+<wire x1="10" y1="0" x2="10" y2="-15.5" width="0.127" layer="51"/>
+<wire x1="10" y1="-15.5" x2="0" y2="-15.5" width="0.127" layer="51"/>
+<wire x1="0" y1="-15.5" x2="0" y2="0" width="0.127" layer="51"/>
+<pad name="P$1" x="5" y="-2.5" drill="1.3" diameter="2.54" shape="long" rot="R180"/>
+<pad name="P$2" x="-0.2" y="-13.5" drill="1.3" diameter="2.54" shape="long" rot="R90"/>
+<pad name="P$3" x="5" y="-15.7" drill="1.3" diameter="2.54" shape="long" rot="R180"/>
+<text x="0" y="3.81" size="1.27" layer="21">&gt;NAME</text>
+<polygon width="0.127" layer="45">
+<vertex x="2" y="3.5"/>
+<vertex x="8" y="3.5"/>
+<vertex x="8" y="0"/>
+<vertex x="2" y="0"/>
+</polygon>
+<rectangle x1="4.5085" y1="-17.3355" x2="5.5245" y2="-14.1605" layer="20" rot="R90"/>
+<rectangle x1="-0.762" y1="-15.113" x2="0.254" y2="-11.938" layer="20"/>
+<rectangle x1="4.5085" y1="-4.1275" x2="5.5245" y2="-0.9525" layer="20" rot="R90"/>
 </package>
 </packages>
 </library>
@@ -2096,8 +2116,7 @@ design rules under a new name.</description>
 <attribute name="MF" value="VISHAY/TELEFUNKEN" x="15.748" y="59.69" size="1.778" layer="27" display="off"/>
 <attribute name="OC_FARNELL" value="9860150" x="15.748" y="59.69" size="1.778" layer="27" display="off"/>
 </element>
-<element name="PITCH" library="erthenvar" package="ERTHENVAR-JACK-90DEG" value="AUDIO-JACK" x="72.898" y="0" rot="R180"/>
-<element name="PWM_OUT" library="erthenvar" package="ERTHENVAR-JACK-90DEG" value="AUDIO-JACK" x="10.668" y="0" rot="R180"/>
+<element name="TONE_OUT" library="erthenvar" package="ERTHENVAR-JACK-90DEG" value="AUDIO-JACK" x="10.668" y="0" rot="R180"/>
 <element name="PWR1" library="eurorack" package="POWER_16" value="POWER" x="55.372" y="63.5"/>
 <element name="Q1" library="crystal" package="HC49/S" value="" x="29.718" y="34.29" rot="R90">
 <attribute name="OC_NEWARK" value="unknown" x="29.718" y="34.29" size="1.778" layer="27" rot="R90" display="off"/>
@@ -2140,6 +2159,7 @@ design rules under a new name.</description>
 <element name="GATE_BUS_ENABLE" library="SparkFun-Connectors" package="1X02_LOCK_LONGPADS" value="M02LOCK_LONGPADS" x="70.485" y="56.261" rot="R180"/>
 <element name="CV_BUS_ENABLE" library="SparkFun-Connectors" package="1X02_LOCK_LONGPADS" value="M02LOCK_LONGPADS" x="67.945" y="51.562"/>
 <element name="MIDI_IN" library="SparkFun-Connectors" package="1X02_LOCK_LONGPADS" value="M02LOCK_LONGPADS" x="24.13" y="53.34" rot="R270"/>
+<element name="JCK1" library="erthenvar" package="JACK-90DEG-ITEAD" value="AUDIO-JACKITEAD" x="73.66" y="0" rot="R180"/>
 </elements>
 <signals>
 <signal name="N$4">
@@ -2294,20 +2314,20 @@ design rules under a new name.</description>
 <wire x1="62.738" y1="38.608" x2="64.008" y2="37.084" width="0.8128" layer="16"/>
 </signal>
 <signal name="N$9">
-<contactref element="PITCH" pad="P$3"/>
 <contactref element="R10" pad="2"/>
 <contactref element="CV_BUS_ENABLE" pad="2"/>
 <wire x1="70.739" y1="51.054" x2="70.993" y2="48.768" width="0.8128" layer="16"/>
 <wire x1="70.485" y1="51.308" x2="70.739" y2="51.054" width="0.8128" layer="16"/>
 <wire x1="70.993" y1="48.768" x2="71.12" y2="47.498" width="0.8128" layer="16"/>
 <wire x1="70.485" y1="51.308" x2="70.612" y2="51.562" width="0.8128" layer="16"/>
-<wire x1="67.898" y1="15.7" x2="69.548" y2="15.7" width="0.8128" layer="16"/>
 <wire x1="69.548" y1="15.7" x2="72.136" y2="26.162" width="0.8128" layer="16"/>
 <wire x1="72.136" y1="26.162" x2="72.136" y2="33.02" width="0.8128" layer="16"/>
 <wire x1="72.136" y1="33.02" x2="73.406" y2="35.814" width="0.8128" layer="16"/>
 <wire x1="73.406" y1="35.814" x2="73.406" y2="40.894" width="0.8128" layer="16"/>
 <wire x1="73.406" y1="40.894" x2="71.628" y2="44.45" width="0.8128" layer="16"/>
 <wire x1="71.628" y1="44.45" x2="71.12" y2="47.498" width="0.8128" layer="16"/>
+<contactref element="JCK1" pad="P$3"/>
+<wire x1="68.66" y1="15.7" x2="69.548" y2="15.7" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$12">
 <contactref element="SCALE_TRIM" pad="S"/>
@@ -2477,12 +2497,12 @@ design rules under a new name.</description>
 <wire x1="32.004" y1="26.924" x2="31.496" y2="23.114" width="0.8128" layer="16"/>
 </signal>
 <signal name="N$21">
-<contactref element="U1" pad="11"/>
 <contactref element="R12" pad="2"/>
 <wire x1="31.877" y1="30.226" x2="30.099" y2="28.194" width="0.8128" layer="16"/>
 <wire x1="34.163" y1="30.48" x2="31.877" y2="30.226" width="0.8128" layer="16"/>
-<wire x1="34.798" y1="30.48" x2="34.163" y2="30.48" width="0.8128" layer="16"/>
 <wire x1="30.099" y1="28.194" x2="29.083" y2="24.384" width="0.8128" layer="16"/>
+<contactref element="U1" pad="19"/>
+<wire x1="34.163" y1="30.48" x2="42.418" y2="33.02" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$23">
 <contactref element="R4" pad="1"/>
@@ -2495,7 +2515,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$24">
 <contactref element="R4" pad="2"/>
-<contactref element="PWM_OUT" pad="P$3"/>
+<contactref element="TONE_OUT" pad="P$3"/>
 <wire x1="2.286" y1="22.606" x2="2.794" y2="19.844" width="0.8128" layer="16"/>
 <wire x1="2.794" y1="19.844" x2="5.668" y2="15.7" width="0.8128" layer="16"/>
 </signal>
@@ -2570,9 +2590,8 @@ design rules under a new name.</description>
 <contactref element="GATE" pad="P$1"/>
 <contactref element="C4" pad="2"/>
 <contactref element="VEL" pad="P$1"/>
-<contactref element="PITCH" pad="P$1"/>
 <contactref element="SCALE_TRIM" pad="E"/>
-<contactref element="PWM_OUT" pad="P$1"/>
+<contactref element="TONE_OUT" pad="P$1"/>
 <contactref element="C6" pad="2"/>
 <contactref element="IC1" pad="4"/>
 <contactref element="MIDI_CH" pad="A"/>
@@ -2628,7 +2647,6 @@ design rules under a new name.</description>
 <wire x1="21.202" y1="3.048" x2="18.368" y2="2.5" width="0.8128" layer="16"/>
 <wire x1="37.338" y1="1.27" x2="53.968" y2="1.27" width="0.8128" layer="16"/>
 <wire x1="53.968" y1="1.27" x2="55.198" y2="2.5" width="0.8128" layer="16"/>
-<wire x1="55.198" y1="2.5" x2="67.898" y2="2.5" width="0.8128" layer="16"/>
 <wire x1="53.848" y1="30.48" x2="51.054" y2="30.48" width="0.8128" layer="16"/>
 <wire x1="50.546" y1="49.53" x2="51.308" y2="45.847" width="0.8128" layer="16"/>
 <wire x1="53.848" y1="55.118" x2="57.658" y2="54.102" width="0.8128" layer="16"/>
@@ -2653,6 +2671,8 @@ design rules under a new name.</description>
 <wire x1="50.546" y1="51.816" x2="53.848" y2="55.118" width="0.8128" layer="16"/>
 <wire x1="53.848" y1="55.118" x2="53.848" y2="61.468" width="1.016" layer="16"/>
 <wire x1="53.848" y1="61.468" x2="54.61" y2="62.23" width="1.016" layer="16"/>
+<contactref element="JCK1" pad="P$1"/>
+<wire x1="68.66" y1="2.5" x2="5.668" y2="2.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$18">
 <contactref element="VEL_LED" pad="A"/>
