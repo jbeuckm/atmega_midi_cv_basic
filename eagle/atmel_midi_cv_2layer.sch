@@ -4216,22 +4216,6 @@ Source: AVX .. aphvc.pdf</description>
 <rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.5001" x2="0.1999" y2="0.5001" layer="35"/>
 </package>
-<package name="R1005">
-<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
-<wire x1="-0.245" y1="0.224" x2="0.245" y2="0.224" width="0.1524" layer="51"/>
-<wire x1="0.245" y1="-0.224" x2="-0.245" y2="-0.224" width="0.1524" layer="51"/>
-<wire x1="-1.473" y1="0.483" x2="1.473" y2="0.483" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.483" x2="1.473" y2="-0.483" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.483" x2="-1.473" y2="-0.483" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.483" x2="-1.473" y2="0.483" width="0.0508" layer="39"/>
-<smd name="1" x="-0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
-<smd name="2" x="0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
-<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
-<rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
-</package>
 <package name="R1206">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
 <wire x1="0.9525" y1="-0.8128" x2="-0.9652" y2="-0.8128" width="0.1524" layer="51"/>
@@ -10565,6 +10549,16 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <vertex x="-3.05" y="-2.475"/>
 </polygon>
 </package>
+<package name="R01005">
+<smd name="1" x="-0.1625" y="0" dx="0.2" dy="0.25" layer="1"/>
+<smd name="2" x="0.1625" y="0" dx="0.2" dy="0.25" layer="1"/>
+<text x="-0.4" y="0.3" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.4" y="-1.6" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.2" y1="-0.1" x2="-0.075" y2="0.1" layer="51"/>
+<rectangle x1="0.075" y1="-0.1" x2="0.2" y2="0.1" layer="51"/>
+<rectangle x1="-0.15" y1="0.05" x2="0.15" y2="0.1" layer="51"/>
+<rectangle x1="-0.15" y1="-0.1" x2="0.15" y2="-0.05" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="C-US">
@@ -11358,15 +11352,6 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <technology name=""/>
 </technologies>
 </device>
-<device name="R1005" package="R1005">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
 <device name="R1206" package="R1206">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
@@ -12079,6 +12064,15 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </technologies>
 </device>
 <device name="1812X7R" package="1812X7R">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="01005" package="R01005">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -15218,46 +15212,6 @@ Piher</description>
 <text x="-4.445" y="3.5306" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-4.445" y="-4.0894" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="ST15">
-<description>&lt;b&gt;POTENTIOMETER&lt;/b&gt;&lt;p&gt;
-Piher</description>
-<wire x1="-3.683" y1="-2.54" x2="-3.048" y2="-3.175" width="0.1524" layer="21"/>
-<wire x1="3.048" y1="-3.175" x2="3.683" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="-6.985" y1="2.54" x2="-1.905" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="2.54" x2="-1.397" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="7.62" y1="1.905" x2="6.985" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="7.62" y1="1.905" x2="7.62" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-6.985" y1="-2.54" x2="-7.62" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-6.985" y1="2.54" x2="-7.62" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="-7.62" y1="-1.905" x2="-7.62" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="7.62" y1="-1.905" x2="6.985" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="7.62" y1="-1.905" x2="6.477" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="6.477" y1="-1.905" x2="3.683" y2="-1.905" width="0.1524" layer="51"/>
-<wire x1="3.683" y1="-1.905" x2="-3.683" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-7.62" y1="-1.905" x2="-6.477" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-6.477" y1="-1.905" x2="-3.683" y2="-1.905" width="0.1524" layer="51"/>
-<wire x1="-6.985" y1="-2.54" x2="-6.477" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="-6.477" y1="-2.54" x2="-3.683" y2="-2.54" width="0.1524" layer="51"/>
-<wire x1="6.985" y1="-2.54" x2="6.477" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="6.477" y1="-2.54" x2="3.683" y2="-2.54" width="0.1524" layer="51"/>
-<wire x1="3.683" y1="-2.54" x2="-3.683" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="3.048" y1="-3.175" x2="-3.048" y2="-3.175" width="0.1524" layer="21"/>
-<wire x1="1.397" y1="2.54" x2="1.905" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="2.54" x2="6.985" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="2.54" x2="1.905" y2="2.54" width="0.1524" layer="51"/>
-<wire x1="7.62" y1="1.905" x2="1.905" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="1.905" x2="1.397" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="1.905" x2="-1.905" y2="1.905" width="0.1524" layer="51"/>
-<wire x1="-1.397" y1="1.905" x2="-1.905" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.905" x2="-7.62" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="2.54" x2="1.905" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="2.54" x2="-1.905" y2="1.905" width="0.1524" layer="21"/>
-<pad name="A" x="-5.08" y="-2.54" drill="1.3208" shape="long"/>
-<pad name="E" x="5.08" y="-2.54" drill="1.3208" shape="long"/>
-<pad name="S" x="0" y="2.54" drill="1.3208" shape="long"/>
-<text x="1.905" y="3.0226" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-5.08" y="-0.6604" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-</package>
 <package name="SP19LKN">
 <description>&lt;b&gt;POTENTIOMETER&lt;/b&gt;</description>
 <wire x1="-9.525" y1="-2.413" x2="10.16" y2="-2.413" width="0.1524" layer="21"/>
@@ -15489,6 +15443,22 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <text x="-1.5875" y="2.2225" size="1.27" layer="25">&gt;NAME</text>
 <text x="-1.905" y="-3.4925" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="0.55" y1="0.6" x2="1.55" y2="0.85" layer="21"/>
+</package>
+<package name="ST15">
+<description>&lt;b&gt;POTENTIOMETER&lt;/b&gt;&lt;p&gt;
+Piher</description>
+<pad name="A" x="2.025" y="0.505" drill="1.2" shape="long" rot="R90"/>
+<pad name="E" x="1.99" y="44.4" drill="1.2" shape="long" rot="R90"/>
+<pad name="S" x="-1.99" y="0.5" drill="1.2" shape="long" rot="R90"/>
+<text x="-2.695" y="8.4726" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="4.07" y="8.2896" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<wire x1="-4.7" y1="0" x2="4.8" y2="0" width="0.127" layer="21"/>
+<wire x1="4.8" y1="0" x2="4.8" y2="45" width="0.127" layer="21"/>
+<wire x1="4.8" y1="45" x2="-4.7" y2="45" width="0.127" layer="21"/>
+<wire x1="-4.7" y1="45" x2="-4.7" y2="0" width="0.127" layer="21"/>
+<circle x="0" y="2" radius="1" width="0.127" layer="21"/>
+<circle x="0" y="43" radius="1" width="0.127" layer="21"/>
+<rectangle x1="-2" y1="4" x2="2" y2="41" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -16720,9 +16690,18 @@ A modification of conn-hirshman:MAB5SH with two options for the grounding 'teeth
 <vertex x="8" y="0"/>
 <vertex x="2" y="0"/>
 </polygon>
-<rectangle x1="4.5085" y1="-17.3355" x2="5.5245" y2="-14.1605" layer="20" rot="R90"/>
-<rectangle x1="-0.762" y1="-15.113" x2="0.254" y2="-11.938" layer="20"/>
-<rectangle x1="4.5085" y1="-4.1275" x2="5.5245" y2="-0.9525" layer="20" rot="R90"/>
+<wire x1="3.429" y1="-3.048" x2="3.429" y2="-2.032" width="0.127" layer="46"/>
+<wire x1="3.429" y1="-2.032" x2="6.604" y2="-2.032" width="0.127" layer="46"/>
+<wire x1="6.604" y1="-2.032" x2="6.604" y2="-3.048" width="0.127" layer="46"/>
+<wire x1="6.604" y1="-3.048" x2="3.429" y2="-3.048" width="0.127" layer="46"/>
+<wire x1="0.254" y1="-15.113" x2="-0.762" y2="-15.113" width="0.127" layer="46"/>
+<wire x1="-0.762" y1="-15.113" x2="-0.762" y2="-11.938" width="0.127" layer="46"/>
+<wire x1="-0.762" y1="-11.938" x2="0.254" y2="-11.938" width="0.127" layer="46"/>
+<wire x1="0.254" y1="-11.938" x2="0.254" y2="-15.113" width="0.127" layer="46"/>
+<wire x1="3.429" y1="-16.256" x2="3.429" y2="-15.24" width="0.127" layer="46"/>
+<wire x1="3.429" y1="-15.24" x2="6.604" y2="-15.24" width="0.127" layer="46"/>
+<wire x1="6.604" y1="-15.24" x2="6.604" y2="-16.256" width="0.127" layer="46"/>
+<wire x1="6.604" y1="-16.256" x2="3.429" y2="-16.256" width="0.127" layer="46"/>
 </package>
 </packages>
 <symbols>
@@ -18090,10 +18069,10 @@ at 30/07/2012 17:45:58</description>
 <part name="U$4" library="MCP4822" deviceset="MCP4822-E/P" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="R24" library="rcl" deviceset="R-US_" device="0207/5V" value="1M"/>
+<part name="R24" library="rcl" deviceset="R-US_" device="0207/7" value="1M"/>
 <part name="R25" library="rcl" deviceset="R-US_" device="0207/7" value="470"/>
-<part name="VEL_LED" library="SparkFun-LED" deviceset="LED" device="5MM"/>
-<part name="R9" library="rcl" deviceset="R-US_" device="0207/2V" value="1k2"/>
+<part name="VEL_LED" library="SparkFun-LED" deviceset="LED" device="3MM"/>
+<part name="R9" library="rcl" deviceset="R-US_" device="0207/7" value="1k2"/>
 <part name="R26" library="rcl" deviceset="R-US_" device="0207/7" value="1k"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="PWR1" library="eurorack" deviceset="POWER" device=""/>
@@ -18124,7 +18103,7 @@ at 30/07/2012 17:45:58</description>
 <part name="P-1" library="supply1" deviceset="-12V" device=""/>
 <part name="P-2" library="supply1" deviceset="-12V" device=""/>
 <part name="PITCH" library="erthenvar" deviceset="AUDIO-JACK" device="ITEAD"/>
-<part name="R6" library="rcl" deviceset="R-US_" device="0207/2V" value="20k"/>
+<part name="R6" library="rcl" deviceset="R-US_" device="0207/7" value="20k"/>
 <part name="R14" library="rcl" deviceset="R-US_" device="0207/7" value="2k4"/>
 <part name="C6" library="rcl" deviceset="CPOL-US" device="B45181A" value="10u"/>
 <part name="U$1" library="adafruit" deviceset="FB" device=""/>
@@ -18137,11 +18116,11 @@ at 30/07/2012 17:45:58</description>
 <part name="R16" library="rcl" deviceset="R-US_" device="0207/7" value="220"/>
 <part name="IN" library="adafruit" deviceset="MIDIJACK" device=""/>
 <part name="RESET" library="SparkFun-Connectors" deviceset="M02" device="LOCK_LONGPADS"/>
-<part name="R2" library="rcl" deviceset="R-US_" device="0207/5V" value="3k3"/>
-<part name="SCALE_TRIM1" library="pot" deviceset="TRIM_US-" device="B64W" value="10k"/>
-<part name="R17" library="rcl" deviceset="R-US_" device="0207/5V" value="5k"/>
+<part name="R2" library="rcl" deviceset="R-US_" device="0207/7" value="3k3"/>
+<part name="SCALE" library="pot" deviceset="TRIM_US-" device="B64W" value="10k"/>
+<part name="R17" library="rcl" deviceset="R-US_" device="0207/7" value="5k"/>
 <part name="R18" library="rcl" deviceset="R-US_" device="0207/7" value="1k"/>
-<part name="R19" library="rcl" deviceset="R-US_" device="0207/5V" value="1k2"/>
+<part name="R19" library="rcl" deviceset="R-US_" device="0207/7" value="1k2"/>
 <part name="P+3" library="supply1" deviceset="+12V" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
@@ -18229,7 +18208,7 @@ at 30/07/2012 17:45:58</description>
 <attribute name="NAME" x="5.842" y="93.98" size="1.778" layer="95" rot="R270"/>
 </instance>
 <instance part="R2" gate="G$1" x="119.38" y="116.84"/>
-<instance part="SCALE_TRIM1" gate="G$1" x="104.14" y="81.28" rot="MR180"/>
+<instance part="SCALE" gate="G$1" x="104.14" y="81.28" rot="MR180"/>
 <instance part="R17" gate="G$1" x="147.32" y="129.54"/>
 <instance part="R18" gate="G$1" x="116.84" y="76.2"/>
 <instance part="R19" gate="G$1" x="149.86" y="76.2"/>
@@ -18578,7 +18557,7 @@ at 30/07/2012 17:45:58</description>
 <pinref part="GND7" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="SCALE_TRIM1" gate="G$1" pin="E"/>
+<pinref part="SCALE" gate="G$1" pin="E"/>
 <wire x1="104.14" y1="73.66" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="GND18" gate="1" pin="GND"/>
 </segment>
@@ -18820,7 +18799,7 @@ at 30/07/2012 17:45:58</description>
 <pinref part="R17" gate="G$1" pin="1"/>
 <wire x1="142.24" y1="129.54" x2="119.38" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="129.54" x2="119.38" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="SCALE_TRIM1" gate="G$1" pin="S"/>
+<pinref part="SCALE" gate="G$1" pin="S"/>
 <wire x1="109.22" y1="81.28" x2="119.38" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="81.28" x2="119.38" y2="99.06" width="0.1524" layer="91"/>
 <junction x="119.38" y="99.06"/>
