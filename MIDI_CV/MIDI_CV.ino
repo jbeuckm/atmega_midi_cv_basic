@@ -160,7 +160,6 @@ void setup()
 
     // calibrate 8V
     targetFrequencyCode = (108 - 12) * 42;
-    pitchDAC.setValue(targetFrequencyCode);
     // calibrate full velocity
     velocityDAC.setValue(32 * 127);
 
