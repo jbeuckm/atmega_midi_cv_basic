@@ -10,7 +10,8 @@ NoteBook notebook;
 
 #define TONE_PIN 7
 
-#define ALL_NOTES_OFF 123
+#define CC_ALL_NOTES_OFF 123
+#define CC_NOTE_PRIORITY 80
 
 byte deviceID = 1;
 
@@ -61,7 +62,17 @@ void handleControlChange(byte channel, byte number, byte value)
 {
   switch (number) {
         
-    case ALL_NOTES_OFF:
+    case CC_NOTE_PRIORITY:
+      if (value > 64) {
+        notebook.setMode(velocity);
+      } else if (value > 32) {
+        notebook.setMode(highest);
+      } else {
+        notebook.setMode(lowest);
+      }
+      break;
+        
+    case CC_ALL_NOTES_OFF:
       notebook.allNotesOff();
       handlePitchBend(selectedChannel, 0);
       digitalWrite(GATE_PIN, LOW);
