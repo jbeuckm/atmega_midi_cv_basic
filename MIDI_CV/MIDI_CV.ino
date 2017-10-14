@@ -23,6 +23,7 @@ double targetFrequencyCode;
 double currentFrequencyCode;
 double frequencyCodeStep = 0;
 double portamentoStepCount = 1;
+int lastPitch = 0;
 
 int pitchbendOffset = 0;
 
@@ -36,9 +37,11 @@ void processNote(char pitch, char velocity) {
   targetFrequencyCode = (pitch - 12) * 42;
   frequencyCodeStep = (targetFrequencyCode - currentFrequencyCode) / portamentoStepCount;
   
-  velocityDAC.setValue(velocity * 32);  
+  pitchDAC.setValue((int)targetFrequencyCode + pitchbendOffset);
+  velocityDAC.setValue(velocity * 32);
 
-  tone(TONE_PIN, (unsigned int)pgm_read_word(&frequency[pitch]));
+  tone(TONE_PIN, (unsigned int)pgm_read_word(&frequency[pitch]) + (pitchbendOffset >> 5));
+  lastPitch = pitch;
 }
 
 Note *result;
@@ -91,6 +94,9 @@ void handleControlChange(byte channel, byte number, byte value)
 void handlePitchBend(byte channel, int bend)
 {
   pitchbendOffset = bend >> 4;
+  pitchDAC.setValue((int)targetFrequencyCode + pitchbendOffset);
+
+  tone(TONE_PIN, (unsigned int)pgm_read_word(&frequency[lastPitch]) + (pitchbendOffset >> 5));
 }
 
 
@@ -147,7 +153,7 @@ ISR(TIMER1_COMPA_vect) {
 
 void setup()
 {
-    setupTimer1khz();
+//    setupTimer1khz();
   
     selectedChannel = EEPROM.read(0);
 
