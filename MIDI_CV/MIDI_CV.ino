@@ -6,7 +6,8 @@
 
 NoteBook notebook;
 
-#define GATE_PIN 9
+#define LED_PIN 9
+#define GATE_PIN 4
 
 #define TONE_PIN 7
 
@@ -51,6 +52,7 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
   result = notebook.noteOn(pitch, velocity);
   processNote(result->pitch, result->velocity);
   digitalWrite(GATE_PIN, HIGH);
+  digitalWrite(LED_PIN, HIGH);
 }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
@@ -59,6 +61,7 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
   
   if (result == 0) {
     digitalWrite(GATE_PIN, LOW);
+    digitalWrite(LED_PIN, LOW);
   } else {
     processNote(result->pitch, result->velocity);
   }
@@ -86,6 +89,7 @@ void handleControlChange(byte channel, byte number, byte value)
       notebook.allNotesOff();
       handlePitchBend(selectedChannel, 0);
       digitalWrite(GATE_PIN, LOW);
+      digitalWrite(LED_PIN, LOW);
       break;
   }
 }
@@ -157,6 +161,8 @@ void setup()
   
     selectedChannel = EEPROM.read(0);
 
+    pinMode(LED_PIN, OUTPUT);
+    digitalWrite(LED_PIN, LOW);
     pinMode(GATE_PIN, OUTPUT);
     digitalWrite(GATE_PIN, LOW);
 
