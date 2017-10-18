@@ -3,6 +3,7 @@
 #include <EEPROM.h>
 #include <avr/pgmspace.h>
 #include "notebook.hpp"
+#include "TonePlus.h"
 
 NoteBook notebook;
 
@@ -41,7 +42,7 @@ void processNote(char pitch, char velocity) {
   pitchDAC.setValue((int)targetFrequencyCode + pitchbendOffset);
   velocityDAC.setValue(velocity * 32);
 
-  tone(TONE_PIN, (unsigned int)pgm_read_word(&frequency[pitch]) + (pitchbendOffset >> 5));
+  updateToneFrequency((unsigned int)pgm_read_word(&frequency[pitch]) + (pitchbendOffset >> 5));
   lastPitch = pitch;
 }
 
@@ -55,6 +56,10 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
   digitalWrite(LED_PIN, HIGH);
 }
 
+void updateFrequencyDAC() {
+  pitchDAC.setValue((int)targetFrequencyCode + pitchbendOffset);  
+}
+
 void handleNoteOff(byte channel, byte pitch, byte velocity)
 {
   result = notebook.noteOff(pitch);
@@ -66,6 +71,7 @@ void handleNoteOff(byte channel, byte pitch, byte velocity)
     processNote(result->pitch, result->velocity);
   }
 }
+
 
 void handleControlChange(byte channel, byte number, byte value)
 {
@@ -100,7 +106,7 @@ void handlePitchBend(byte channel, int bend)
   pitchbendOffset = bend >> 4;
   pitchDAC.setValue((int)targetFrequencyCode + pitchbendOffset);
 
-  tone(TONE_PIN, (unsigned int)pgm_read_word(&frequency[lastPitch]) + (pitchbendOffset >> 5));
+  updateToneFrequency((unsigned int)pgm_read_word(&frequency[lastPitch]) + (pitchbendOffset >> 5));
 }
 
 
@@ -134,31 +140,11 @@ void handleSystemExclusive(byte message[], unsigned size) {
 
 }
 
-void setupTimer1khz() {
-    //set timer1 interrupt at 1kHz
-    cli();
-    TCCR1A = 0; // set entire TCCR1A register to 0
-    TCCR1B = 0; // same for TCCR1B
-    TCNT1  = 0; //initialize counter value to 0;
-    // set timer count for 1khz increments
-    OCR1A = 1999;// = (16*10^6) / (1000*8) - 1
-    TCCR1B |= (1 << WGM12); // turn on CTC mode    
-    TCCR1B |= (1 << CS11); // Set CS11 bit for 8 prescaler
-    TIMSK1 |= (1 << OCIE1A); // enable timer compare interrupt
-    sei();
-}
-
-// 1khz interrupt handler
-ISR(TIMER1_COMPA_vect) {
-  pitchDAC.setValue((int)targetFrequencyCode + pitchbendOffset);
-}
 
 // -----------------------------------------------------------------------------
 
 void setup()
 {
-//    setupTimer1khz();
-  
     selectedChannel = EEPROM.read(0);
 
     pinMode(LED_PIN, OUTPUT);
@@ -167,6 +153,9 @@ void setup()
     digitalWrite(GATE_PIN, LOW);
 
     delay(500);
+
+    TonePlus(TONE_PIN, 100, updateFrequencyDAC);
+
 
     playScale(selectedChannel);
 
