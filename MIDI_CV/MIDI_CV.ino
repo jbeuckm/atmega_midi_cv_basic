@@ -1,9 +1,10 @@
 #include <MIDI.h>
-#include <AH_MCP4922.h>
+#include "AH_MCP4922.h"
 #include <EEPROM.h>
 #include <avr/pgmspace.h>
 #include "notebook.hpp"
 #include "TonePlus.h"
+#include "digitalWriteFast.h"
 
 NoteBook notebook;
 
