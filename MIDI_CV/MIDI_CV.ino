@@ -22,11 +22,12 @@ AH_MCP4922 pitchDAC(10,11,12,LOW,LOW);
 AH_MCP4922 velocityDAC(10,11,12,HIGH,LOW);
 
 double targetFrequencyCode;
-volatile double currentFrequencyCode = 1;
-volatile double frequencyCodeStep = 0;
-double portamentoTime = 0;
+double currentFrequencyCode = 1;
+double frequencyCodeSlideRate = 0;
+double portamentoTime = 1;
 int lastPitch = 0;
 volatile uint16_t toneFrequency;
+unsigned long noteStartTime;
 
 int pitchbendOffset = 0;
 
@@ -40,7 +41,7 @@ void processNote(char pitch, char velocity) {
   toneFrequency = (unsigned int)pgm_read_word(&frequency[pitch]);
 
   targetFrequencyCode = (pitch - 12) * 42;
-  frequencyCodeStep = (targetFrequencyCode - currentFrequencyCode) / pow(toneFrequency, portamentoTime);
+  frequencyCodeSlideRate = (targetFrequencyCode - currentFrequencyCode) / portamentoTime;
   
   velocityDAC.setValue((int)velocity << 5);
 
@@ -52,6 +53,7 @@ Note *result;
 
 void handleNoteOn(byte channel, byte pitch, byte velocity)
 {
+  noteStartTime = millis();
   result = notebook.noteOn(pitch, velocity);
   processNote(result->pitch, result->velocity);
   digitalWrite(GATE_PIN, HIGH);
@@ -60,14 +62,14 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
 
 void updateFrequencyDAC() {
 
-  currentFrequencyCode += frequencyCodeStep;
+  currentFrequencyCode += frequencyCodeSlideRate * (millis() - noteStartTime);
 
-  if (frequencyCodeStep < 0 && currentFrequencyCode <= targetFrequencyCode) {
-    frequencyCodeStep = 0;
+  if (frequencyCodeSlideRate < 0 && currentFrequencyCode <= targetFrequencyCode) {
+    frequencyCodeSlideRate = 0;
     currentFrequencyCode = targetFrequencyCode;
   }
-  if (frequencyCodeStep > 0 && currentFrequencyCode >= targetFrequencyCode) {
-    frequencyCodeStep = 0;
+  if (frequencyCodeSlideRate > 0 && currentFrequencyCode >= targetFrequencyCode) {
+    frequencyCodeSlideRate = 0;
     currentFrequencyCode = targetFrequencyCode;
   }
 
@@ -92,7 +94,7 @@ void handleControlChange(byte channel, byte number, byte value)
   switch (number) {
 
     case CC_PORTAMENTO_TIME:
-      portamentoTime = .01 * value;
+      portamentoTime = 1 + 100 * value * value;
       break;
         
     case CC_NOTE_PRIORITY:
