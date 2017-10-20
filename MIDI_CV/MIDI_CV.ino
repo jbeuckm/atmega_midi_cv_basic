@@ -3,7 +3,6 @@
 #include <EEPROM.h>
 #include <avr/pgmspace.h>
 #include "notebook.hpp"
-#include "TonePlus.h"
 #include "digitalWriteFast.h"
 
 NoteBook notebook;
@@ -23,10 +22,11 @@ AH_MCP4922 pitchDAC(10,11,12,LOW,LOW);
 AH_MCP4922 velocityDAC(10,11,12,HIGH,LOW);
 
 double targetFrequencyCode;
-double currentFrequencyCode;
-double frequencyCodeStep = 0;
-double portamentoStepCount = 1;
+volatile double currentFrequencyCode = 1;
+volatile double frequencyCodeStep = 0;
+double portamentoTime = 0;
 int lastPitch = 0;
+volatile uint16_t toneFrequency;
 
 int pitchbendOffset = 0;
 
@@ -37,13 +37,14 @@ MIDI_CREATE_DEFAULT_INSTANCE();
 byte selectedChannel = 17;
 
 void processNote(char pitch, char velocity) {
-  targetFrequencyCode = (pitch - 12) * 42;
-  frequencyCodeStep = (targetFrequencyCode - currentFrequencyCode) / portamentoStepCount;
-  
-  pitchDAC.setValue((int)targetFrequencyCode + pitchbendOffset);
-  velocityDAC.setValue(velocity * 32);
+  toneFrequency = (unsigned int)pgm_read_word(&frequency[pitch]);
 
-  updateToneFrequency((unsigned int)pgm_read_word(&frequency[pitch]) + (pitchbendOffset >> 5));
+  targetFrequencyCode = (pitch - 12) * 42;
+  frequencyCodeStep = (targetFrequencyCode - currentFrequencyCode) / pow(toneFrequency, portamentoTime);
+  
+  velocityDAC.setValue((int)velocity << 5);
+
+  tone(TONE_PIN, toneFrequency + (pitchbendOffset >> 5));
   lastPitch = pitch;
 }
 
@@ -58,7 +59,19 @@ void handleNoteOn(byte channel, byte pitch, byte velocity)
 }
 
 void updateFrequencyDAC() {
-  pitchDAC.setValue((int)targetFrequencyCode + pitchbendOffset);  
+
+  currentFrequencyCode += frequencyCodeStep;
+
+  if (frequencyCodeStep < 0 && currentFrequencyCode <= targetFrequencyCode) {
+    frequencyCodeStep = 0;
+    currentFrequencyCode = targetFrequencyCode;
+  }
+  if (frequencyCodeStep > 0 && currentFrequencyCode >= targetFrequencyCode) {
+    frequencyCodeStep = 0;
+    currentFrequencyCode = targetFrequencyCode;
+  }
+
+  pitchDAC.setValue((int)currentFrequencyCode + pitchbendOffset);  
 }
 
 void handleNoteOff(byte channel, byte pitch, byte velocity)
@@ -79,7 +92,7 @@ void handleControlChange(byte channel, byte number, byte value)
   switch (number) {
 
     case CC_PORTAMENTO_TIME:
-      portamentoStepCount = 1 + value * value;
+      portamentoTime = .01 * value;
       break;
         
     case CC_NOTE_PRIORITY:
@@ -105,9 +118,8 @@ void handleControlChange(byte channel, byte number, byte value)
 void handlePitchBend(byte channel, int bend)
 {
   pitchbendOffset = bend >> 4;
-  pitchDAC.setValue((int)targetFrequencyCode + pitchbendOffset);
 
-  updateToneFrequency((unsigned int)pgm_read_word(&frequency[lastPitch]) + (pitchbendOffset >> 5));
+  tone(TONE_PIN, toneFrequency + (pitchbendOffset >> 5));
 }
 
 
@@ -155,15 +167,12 @@ void setup()
 
     delay(500);
 
-    TonePlus(TONE_PIN, 100, updateFrequencyDAC);
-
-
     playScale(selectedChannel);
 
     // calibrate 8V
-    targetFrequencyCode = (108 - 12) * 42;
     // calibrate full velocity
-    velocityDAC.setValue(32 * 127);
+      handleNoteOn(selectedChannel, 108, 127);
+      handleNoteOff(selectedChannel, 108, 127);
 
     MIDI.setHandleNoteOn(handleNoteOn);
     MIDI.setHandleNoteOff(handleNoteOff);
@@ -192,5 +201,6 @@ void playScale(int channel) {
 void loop()
 {
     MIDI.read();
+    updateFrequencyDAC();
 }
 
