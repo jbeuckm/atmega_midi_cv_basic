@@ -94,7 +94,7 @@ void handleControlChange(byte channel, byte number, byte value)
   switch (number) {
 
     case CC_PORTAMENTO_TIME:
-      portamentoTime = 1 + 100 * value * value;
+      portamentoTime = 1.0 + 4.0 * pow(value, 3.5);
       break;
         
     case CC_NOTE_PRIORITY:
