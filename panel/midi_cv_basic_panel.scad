@@ -14,7 +14,7 @@ module EuroPanel(label, hp=8) {
   difference() {
     cube([hp*5.08, 128.5, 2]);
       
-    translate([2,115,1])  {
+    translate([1,118,1])  {
         linear_extrude(height=2, convexity=4) text(label, size=8, font=font);
     }
     translate([7.5,3]) MountingHole();
