@@ -5,7 +5,7 @@ module EuroPanel(label, hp=8) {
   font = ".SF Compact Display:style=Bold";
   labelFontSize = 5.8;
 
-  sideOffset = 4;
+  sideOffset = 5;
   panelWidth = hp*5.08;
 
   translate([panelWidth,0,0]) scale([-1,1,1]) Support();
@@ -53,11 +53,11 @@ module EuroPanel(label, hp=8) {
 
 module KnobHole() { translate([12.5,0,-.5]) cylinder(h=3, d=8, $fn=12); }
 
-module JackHole() { translate([6,0,-.5]) cylinder(h=3, d=6.3, $fn=12); }
+module JackHole() { translate([6,0,-.5]) cylinder(h=3, d=6.5, $fn=12); }
 
 module LEDHole() { translate([10,0,-.5]) cylinder(h=3, d=5.3, $fn=12); }
 
-module MIDIHole() { translate([10,0,-.5]) cylinder(h=3, d=18.5, $fn=24); }
+module MIDIHole() { translate([10.5,0,-.5]) cylinder(h=3, d=18.5, $fn=24); }
 
 module Support() {
     translate([0,10,0])
