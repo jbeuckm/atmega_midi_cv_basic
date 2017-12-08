@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -18202,7 +18203,7 @@ W = angled&lt;p&gt;
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="R24" library="rcl" deviceset="R-US_" device="0207/7" value="1M"/>
 <part name="R25" library="rcl" deviceset="R-US_" device="0207/7" value="470"/>
-<part name="VEL_LED" library="SparkFun-LED" deviceset="LED" device="3MM"/>
+<part name="GATE_LED" library="SparkFun-LED" deviceset="LED" device="3MM"/>
 <part name="R9" library="rcl" deviceset="R-US_" device="0207/7" value="1k2"/>
 <part name="R26" library="rcl" deviceset="R-US_" device="0207/7" value="1k"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
@@ -18291,7 +18292,7 @@ W = angled&lt;p&gt;
 <instance part="GND9" gate="1" x="10.16" y="81.28"/>
 <instance part="R24" gate="G$1" x="-20.32" y="45.72" rot="R90"/>
 <instance part="R25" gate="G$1" x="73.66" y="15.24" rot="R90"/>
-<instance part="VEL_LED" gate="G$1" x="73.66" y="5.08"/>
+<instance part="GATE_LED" gate="G$1" x="73.66" y="5.08"/>
 <instance part="R9" gate="G$1" x="5.08" y="-12.7" rot="R180"/>
 <instance part="R26" gate="G$1" x="38.1" y="-2.54" rot="R180"/>
 <instance part="GND14" gate="1" x="-7.62" y="-30.48"/>
@@ -18684,14 +18685,14 @@ W = angled&lt;p&gt;
 </net>
 <net name="N$18" class="0">
 <segment>
-<pinref part="VEL_LED" gate="G$1" pin="A"/>
+<pinref part="GATE_LED" gate="G$1" pin="A"/>
 <pinref part="R25" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="10.16" x2="73.66" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="VEL_LED" gate="G$1" pin="C"/>
+<pinref part="GATE_LED" gate="G$1" pin="C"/>
 <wire x1="73.66" y1="-2.54" x2="73.66" y2="0" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
 </segment>
