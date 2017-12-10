@@ -18,7 +18,7 @@ Parts placement for Release v0.5:
 
 ![midi_cv_v0.5.png](midi_cv_v0.5.png)
 
-For 6N137 instead of 6N138, make use these changes:
+For 6N137 instead of 6N138, build with these changes:
 
 ![with_6n137.jpeg](with_6n137.jpeg)
 
