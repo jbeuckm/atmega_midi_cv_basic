@@ -98,9 +98,9 @@ void handleControlChange(byte channel, byte number, byte value)
       break;
         
     case CC_NOTE_PRIORITY:
-      if (value > 64) {
+      if (value >= 64) {
         notebook.setMode(velocity);
-      } else if (value > 32) {
+      } else if (value >= 32) {
         notebook.setMode(highest);
       } else {
         notebook.setMode(lowest);
@@ -161,6 +161,10 @@ void handleSystemExclusive(byte message[], unsigned size) {
 void setup()
 {
     selectedChannel = EEPROM.read(0);
+    if (selectedChannel > 16) {
+      selectedChannel = 1;
+      EEPROM.update(0, selectedChannel);
+    }
 
     pinMode(LED_PIN, OUTPUT);
     digitalWrite(LED_PIN, LOW);
@@ -173,8 +177,8 @@ void setup()
 
     // calibrate 8V
     // calibrate full velocity
-      handleNoteOn(selectedChannel, 108, 127);
-      handleNoteOff(selectedChannel, 108, 127);
+    handleNoteOn(selectedChannel, 108, 127);
+    handleNoteOff(selectedChannel, 108, 127);
 
     MIDI.setHandleNoteOn(handleNoteOn);
     MIDI.setHandleNoteOff(handleNoteOff);
